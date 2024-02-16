@@ -15,7 +15,10 @@ function App() {
 
   const addValue = () => {
     // counter = counter + 1
-    setCounter(counter + 1)
+    setCounter((prevCounter) => prevCounter + 1) // prevCounter is the last updated state(can be named anything ie. counter, abc, xyz.) 
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
 
   }
 
