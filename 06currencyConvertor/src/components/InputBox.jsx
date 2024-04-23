@@ -29,7 +29,7 @@ function InputBox({
                   disabled = {amountDisable}
                   value = {amount}
                   onChange = {(e) => onAmountChange && onAmountChange(Number(e.target.value))}
-                            // (onAmountChange &&) it's a checker that whether it's acailable/exist or not
+                            // (onAmountChange &&) it's a checker that whether it's available/exist or not
 
               />
           </div>
@@ -47,7 +47,9 @@ function InputBox({
                       (
                       <option key={currency} value={currency}>
                           {currency}
-                      </option>) )
+                      </option>
+                      ) 
+                    )
                       
                       } 
                       //Note: Always use KEY while looping and mapping over an array in React to display a component.
