@@ -8,6 +8,7 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
+import Github, {githubInfoLoader}  from './components/Github/Github.jsx'
 
 //We can prevent writting the address of each COMPONENT again n again by simply writting/exporting these from an [index.js] file within Components.
  
@@ -44,6 +45,11 @@ const router = createBrowserRouter(
      <Route path='about' element={<About/>}/>
      <Route path='contact' element={<Contact/>}/>
      <Route path='user/:userid' element={<User/>}/>
+     <Route 
+     loader={githubInfoLoader}
+     path='github' 
+     element={<Github/>}/>
+     //LOADER- to optimise things when there are api calls
 
     </Route>
 
