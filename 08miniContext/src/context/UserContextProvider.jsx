@@ -1,10 +1,13 @@
-import React from "react";
+import React ,{useState} from "react";
 import UserContext from "./UserContext"
 
-const UserContextProvider =({children}) => {
- const [user,setUser] = React.useState(null)
+
+const UserContextProvider = ({children}) => {
+ const [user,setUser] = useState(null)
+ //Get the access to any api call/ data from here
+
      return (
-    <UserContext.Provider>
+    <UserContext.Provider value={{user, setUser}}>
     {children}
     </UserContext.Provider>
   )
