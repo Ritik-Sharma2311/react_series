@@ -14,11 +14,11 @@ function App() {
   const darkTheme = () =>{
     setThemeMode("dark")
   }
-
-  //actual change in theme
+ //actual change in theme
+ 
  useEffect(() => {
   document.querySelector('html').classList.remove("light", "dark")
-  document.querySelector('html').classList.add("themeMode")   
+  document.querySelector('html').classList.add(themeMode)   
    return 
  }, [themeMode])
  // The useEffect Hook allows you to perform side effects in your components.
