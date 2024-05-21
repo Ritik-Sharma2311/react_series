@@ -6,8 +6,13 @@ function App() {
 const [todos, setTodos] = useState([])
 
 const addTodo = (todo) => {
-  setTodos((prev) => [{id: Date.now(), }, ...prev] )
+  setTodos((prev) => [{id: Date.now(),...todo}, ...prev] )
 }
+
+const updateTodo = (id, todo) => {
+  setTodos((prev) => )
+}
+
 
   return (
     <TodoProvider value={{todos, addTodo, updatedTodo, deleteTodo, toggleComplete }}>
